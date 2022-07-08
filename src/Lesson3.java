@@ -1,65 +1,55 @@
-class Square
-{
+//Через пустой конструктор
+class Square{
 	public double lenght=0;
 	
-	public square ()//Конструктор
-	{
-	
-	}
+	//Конструктор
+	public square (){}
 	
 	//Площадь
-	public double Area () 
-	{
+	public double Area (){
 		return lenght*lenght;
 	}
 	
 	//Периметр
-	double Perimeter () 
-	{
+	double Perimeter (){
 		return 4*lenght;
 	}
 	
 }
 
-public class Rectangle //через функции
-{
+//через функции
+public class Rectangle{
 	//Площадь
-	public double Area (double lenght, double width) 
-	{
+	public double Area (double lenght, double width){
 		return lenght*width;
 	}
 	
 	//Периметр
-	public double Perimeter (double lenght, double width) 
-	{
+	public double Perimeter (double lenght, double width){
 		return 2*(lenght+width);
 	}
 }
 
-public class Hexagon (double lenght)//Через конструктор
-{
+//Через конструктор
+public class Hexagon (double lenght){
 	//Площадь
-	double Area () 
-	{
+	double Area (){
 		return 3*Math.sqrt(3)*lenght*lenght/2;
 	}
 	
 	//Периметр
-	double Perimeter () 
-	{
+	double Perimeter (){
 		return 6*lenght;
 	}
 	
-	public Hexagon (double l) //Конструктор
-	{
+	//Конструктор
+	public Hexagon (double l){
 		lenght=l;
 	}
 }
 
-public class Lesson3
-{
-    public static void main (String[] args)
-    {
+public class Lesson3 {
+    public static void main (String[] args){
         Square Sq1 = new Square;
 		Sq1.lenght=10;
 		System.out.println("Площадь равна: " + Sq1.Area);
