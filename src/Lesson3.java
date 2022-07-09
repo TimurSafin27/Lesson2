@@ -1,48 +1,47 @@
-//Р§РµСЂРµР· РїСѓСЃС‚РѕР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+//Через пустой конструктор
 class Square{
 	public double lenght=0;
-	
-	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
-	public square (){}
-	
-	//РџР»РѕС‰Р°РґСЊ
+
+	//Площадь
 	public double Area (){
 		return lenght*lenght;
 	}
 	
-	//РџРµСЂРёРјРµС‚СЂ
+	//Периметр
 	double Perimeter (){
 		return 4*lenght;
 	}
-	
 }
 
-//С‡РµСЂРµР· С„СѓРЅРєС†РёРё
-public class Rectangle{
-	//РџР»РѕС‰Р°РґСЊ
+//через функции
+class Rectangle{
+
+	//Площадь
 	public double Area (double lenght, double width){
 		return lenght*width;
 	}
 	
-	//РџРµСЂРёРјРµС‚СЂ
+	//Периметр
 	public double Perimeter (double lenght, double width){
 		return 2*(lenght+width);
 	}
 }
 
-//Р§РµСЂРµР· РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
-public class Hexagon (double lenght){
-	//РџР»РѕС‰Р°РґСЊ
+//Через конструктор
+class Hexagon{
+	double lenght;
+
+	//Площадь
 	double Area (){
 		return 3*Math.sqrt(3)*lenght*lenght/2;
 	}
 	
-	//РџРµСЂРёРјРµС‚СЂ
+	//Периметр
 	double Perimeter (){
 		return 6*lenght;
 	}
 	
-	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+	//Конструктор
 	public Hexagon (double l){
 		lenght=l;
 	}
@@ -50,12 +49,12 @@ public class Hexagon (double lenght){
 
 public class Lesson3 {
     public static void main (String[] args){
-        Square Sq1 = new Square;
+        Square Sq1 = new Square();
 		Sq1.lenght=10;
-		System.out.println("РџР»РѕС‰Р°РґСЊ СЂР°РІРЅР°: " + Sq1.Area);
-		Rectangle Re1 = new Rectangle;
-		System.out.println("РџР»РѕС‰Р°РґСЊ СЂР°РІРЅР°: " + Re1.Area(10,12));
-		Rectangle He1 = new Hexagon (12);
-		System.out.println("РџР»РѕС‰Р°РґСЊ СЂР°РІРЅР°: " + He1.Area);
+		System.out.println("Площадь равна: " + Sq1.Area());
+		Rectangle Re1 = new Rectangle();
+		System.out.println("Площадь равна: " + Re1.Area(10,12));
+		Hexagon He1 = new Hexagon (12);
+		System.out.println("Площадь равна: " + He1.Area());
     }
 }
