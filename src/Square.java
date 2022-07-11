@@ -1,13 +1,24 @@
-public class Square {
-    public double lenght=0;
+public class Square implements Shape{
+    private int lenght;
+    private String Name;
 
-    //Площадь
-    public double Area (){
-        return lenght*lenght;
+    public Square (int lenght, String Name){
+        this.lenght=lenght;
+        this.Name=Name;
     }
 
+    @Override
+    //Площадь
+    public int Area (){
+        return lenght*lenght;
+    }
+    @Override
     //Периметр
-    double Perimeter (){
+    public int Perimeter (){
         return 4*lenght;
+    }
+    //Название
+    public String Name (){
+        return Name;
     }
 }
